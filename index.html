@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accardion</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .show{
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+            position: relative;
+        }
+
+        div{
+            margin-bottom: 15px;
+        }
+
+        h1,p{
+            background: #e60ffa;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+            transition: 0.3s all ease;
+        }
+
+        h1{
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        p{
+            border-bottom-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border-top: 1px solid #fff;
+            opacity: 0;
+            transform: translateY(-50px);
+            visibility: hidden;
+            z-index: -1;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>MAIN TITLE 1</h1>
+        <p>1) Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem id optio perferendis voluptates
+            laborum deserunt voluptatem ducimus obcaecati, nobis, porro iste, consectetur ratione error nostrum
+            praesentium in similique sed!</p>
+    </div>
+
+    <div>
+        <h1>MAIN TITLE 2</h1>
+        <p>2) Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem id optio perferendis voluptates
+            laborum deserunt voluptatem ducimus obcaecati, nobis, porro iste, consectetur ratione error nostrum
+            praesentium in similique sed!</p>
+    </div>
+
+    <div>
+        <h1>MAIN TITLE 3</h1>
+        <p>3) Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem id optio perferendis voluptates
+            laborum deserunt voluptatem ducimus obcaecati, nobis, porro iste, consectetur ratione error nostrum
+            praesentium in similique sed!</p>
+    </div>
+
+    <div>
+        <h1>MAIN TITLE 4</h1>
+        <p>4) Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem id optio perferendis voluptates
+            laborum deserunt voluptatem ducimus obcaecati, nobis, porro iste, consectetur ratione error nostrum
+            praesentium in similique sed!</p>
+    </div>
+
+    <div>
+        <h1>MAIN TITLE 5</h1>
+        <p>5) Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod autem id optio perferendis voluptates
+            laborum deserunt voluptatem ducimus obcaecati, nobis, porro iste, consectetur ratione error nostrum
+            praesentium in similique sed!</p>
+    </div>
+
+    <script>
+        let accardion = document.querySelectorAll("h1");
+
+        for(let i =0; i < accardion.length; i++){
+            accardion[i].addEventListener("click", function () {
+                this.nextElementSibling.classList.toggle("show")
+            })
+        }
+    </script>
+</body>
+
+</html>
